@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Profile</title>
+    <link rel="stylesheet" href="viewProfile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Redressed&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <header>
+        <div id="navbar">
+            <div id="app-name">
+                <a href="javascript:void(0)" onclick="openNav()"><i id="hamburger" class="fa-solid fa-bars"></i></a>
+                RaktaMitra
+            </div>
+            <div id="nav-gap"></div>
+            <div id="nav-sec2">
+                <div class="nav"><a href="index.html">Home</a></div>
+                <div class="nav"><a href="#footer">About us</a></div>
+                <div class="nav"><a href="#faq">FAQ</a></div>
+                <div id="login-sign-but">
+                    <button id="login-signup-but"><a href="login.html">Log In</a> / <a href="Registration.html">Sign Up</a></button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Side bar -->
+    <div id="side-nav" class="side-nav">
+        <div class="side-nav-top">
+            <h3 class="side-nav-title">RaktaMitra</h3>
+        </div>
+        <a href="viewProfile.html"><i class="fa-solid fa-user"></i> View Profile</a>
+        <a href="generateRequest.html"><i class="fa-solid fa-hand-holding-medical"></i> Request Blood</a>
+        <a href="#footer"><i class="fa-solid fa-info-circle"></i> About Us</a>
+        <a href="#"><i class="fa-solid fa-sign-out-alt"></i> Sign Out</a>
+    </div>
+
+    <!-- Profile Section -->
+    <div class="profile-container">
+        <div class="profile-header">
+            <h2>Profile Information</h2>
+        </div>
+
+        <div class="profile-info">
+            <div class="profile-details">
+                <h3>Personal Information</h3>
+                <p><strong>Name:</strong> John Doe</p>
+                <p><strong>Blood Type:</strong> O+</p>
+                <p><strong>Location:</strong> New York, USA</p>
+                <p><strong>Contact Info:</strong> 123-456-7890</p>
+                <p><strong>Availability:</strong> Available for Donation</p>
+                <button class="edit-btn" onclick="toggleEditProfile()">Edit Profile</button>
+            </div>
+            <div class="donation-history">
+                <h3>Donation History</h3>
+                <table>
+                    <tr>
+                        <th>Donation Date</th>
+                        <th>Blood Type Donated</th>
+                        <th>Location</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Profile Section -->
+    <div class="edit-profile-container" id="editProfile">
+        <div class="edit-header">
+            <h2>Edit Profile</h2>
+        </div>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" value="John Doe" />
+
+            <label for="blood-type">Blood Type:</label>
+            <select id="blood-type">
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+            </select>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" value="New York, USA" />
+
+            <label for="contact">Contact Info:</label>
+            <input type="text" id="contact" value="123-456-7890" />
+
+            <button type="submit" class="save-btn">Save Changes</button>
+            <button type="button" class="cancel-btn" onclick="toggleEditProfile()">Cancel</button>
+        </form>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

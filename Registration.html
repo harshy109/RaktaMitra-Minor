@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Registration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Redressed&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="Registration.css">
+</head>
+<body>
+    <header>
+        <div id="navbar">
+          <div id="app-name">
+            <a href="javascript:void(0)" onclick="openNav()"
+              ><i id="hamburger" class="fa-solid fa-bars"></i
+            ></a>
+            RaktaMitra
+          </div>
+          <div id="nav-gap"></div>
+          <div id="nav-sec2">
+            <div class="nav"><a href="index.html">Home</a></div>
+            <div class="nav"><a href="#footer">About us</a></div>
+            <div class="nav"><a href="faq.html">FAQ</a></div>
+            <div id="login-sign-but">
+              <button id="login-signup-but">
+                <a href="login.html">Log In</a> /
+                <a href="Registration.html">Sign Up</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+    <!-- Side bar -->
+    <div id="side-nav" class="side-nav">
+        <div class="side-nav-top">
+            <h3 class="side-nav-title">RaktaMitra</h3>
+        </div>
+        <a href="viewProfile.html"><i class="fa-solid fa-user"></i> View Profile</a>
+        <a href="generateRequest.html"><i class="fa-solid fa-hand-holding-medical"></i> Request Blood</a>
+        <a href="#footer"><i class="fa-solid fa-info-circle"></i> About Us</a>
+        <a href="#"><i class="fa-solid fa-sign-out-alt"></i> Sign Out</a>
+    </div>
+    <main class="container">
+        <form action="/api/auth/register" method="POST" class="registration-form" id="registrationForm">
+            <h2>Registration Form</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="contact">Contact Information:</label>
+            <input type="tel" id="contact" name="contact" placeholder="Phone Number" required>
+            <input type="email" id="email" name="email" placeholder="Email Address" required>
+
+            <label for="aadhar">Aadhar Card Number:</label>
+            <input type="text" id="aadhar" name="aadhar" placeholder="Aadhar Card Number" required>
+
+            <label for="blood-group">Blood Group:</label>
+            <select id="blood-group" name="blood-group" required>
+                <option value="">Select Blood Group</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+            </select>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" placeholder="Enter your age" required>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" placeholder="Enter your address" required>
+
+            <label for="medical-history">Medical History (Optional):</label>
+            <textarea id="medical-history" name="medical-history" placeholder="Enter any relevant medical conditions"></textarea>
+
+            <label for="emergency-contact">Emergency Contact:</label>
+            <input type="text" id="emergency-name" name="emergency-name" placeholder="Contact Person Name" required>
+            <input type="tel" id="emergency-phone" name="emergency-phone" placeholder="Contact Phone Number" required>
+
+            <label for="password">Create Password:</label>
+                <input type="password" id="password" name="password" placeholder="Create your password" required>
+    
+
+            <button type="submit">Register</button>
+        </form>
+    </main>
+    <footer id="footer">
+        <div class="footer-container">
+            <!-- Left Div -->
+            <div class="footer-left">
+                <h3>About Raktamitra</h3>
+                <p>
+                    Raktamitra is a platform dedicated to bridging the gap between blood donors and recipients. 
+                    Our mission is to ensure that no one has to wait for life-saving blood in times of need. 
+                    Join us and be a part of this noble cause to save lives.
+                </p>
+            </div>
+            <!-- Right Div -->
+            <div class="footer-right">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li>Contact Us : 0731- 2347222</li>
+                    
+                    <li><a href="">Know your blood compatibility</a></li>
+                </ul>
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">© 2024 Raktamitra. All Rights Reserved.</p>
+    </footer>
+    <script>
+        // JavaScript to Handle Form Submission
+        const form = document.getElementById("registrationForm");
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault(); // Prevent default form submission
+      
+          // Collect form data
+          const formData = new FormData(form);
+          const data = Object.fromEntries(formData.entries());
+      
+          try {
+            // Send POST request to backend
+            const response = await fetch("http://localhost:5000/api/auth/register", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(data),
+            });
+      
+            const result = await response.json();
+            if (response.ok) {
+              alert("Registration successful!");
+            } else {
+              alert("Error: " + result.message);
+            }
+          } catch (error) {
+            console.error("Error:", error);
+            alert("An error occurred while registering.");
+          }
+        });
+      </script>
+    <script src="index.js"></script>
+</body>
+</html>

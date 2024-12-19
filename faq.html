@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RaktaMitra - FAQ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Redressed&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="faq.css" />
+    <style>
+      .faq-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .faq-item {
+        margin-bottom: 10px;
+      }
+
+      .faq-question {
+        width: 100%;
+        background-color: #f1f1f1;
+        color: #ab2020;
+        font-weight: 600;
+        border: none;
+        padding: 10px;
+        text-align: left;
+        cursor: pointer;
+        font-size: 1.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        background-color: #fafafa;
+        padding: 0 10px;
+      }
+
+      .faq-answer p {
+        margin: 10px 0;
+      }
+
+      .faq-question.active .fa-chevron-down {
+        transform: rotate(180deg);
+      }
+      #faq-section h2 {
+        text-align: center;
+        color: #ab2020;
+        font-weight: 800;
+        padding: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div id="navbar">
+        <div id="app-name">
+          <a href="javascript:void(0)" onclick="openNav()"
+            ><i id="hamburger" class="fa-solid fa-bars"></i
+          ></a>
+          RaktaMitra
+        </div>
+        <div id="nav-gap"></div>
+        <div id="nav-sec2">
+          <div class="nav"><a href="index.html">Home</a></div>
+          <div class="nav"><a href="#footer">About us</a></div>
+          <div class="nav"><a href="faq.html">FAQ</a></div>
+          <div id="login-sign-but">
+            <button id="login-signup-but">
+              <a href="login.html">Log In</a> /
+              <a href="Registration.html">Sign Up</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Side bar -->
+    <div id="side-nav" class="side-nav">
+      <div class="side-nav-top">
+        <h3 class="side-nav-title">RaktaMitra</h3>
+      </div>
+      <a href="viewProfile.html"
+        ><i class="fa-solid fa-user"></i> View Profile</a
+      >
+      <a href="generateRequest.html"
+        ><i class="fa-solid fa-hand-holding-medical"></i> Request Blood</a
+      >
+      <a href="#footer"><i class="fa-solid fa-info-circle"></i> About Us</a>
+      <a href="#"><i class="fa-solid fa-sign-out-alt"></i> Sign Out</a>
+    </div>
+
+    <!-- FAQ Section -->
+    <section id="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-container">
+        <!-- General Questions -->
+        <div class="faq-item">
+          <button class="faq-question">
+            General Questions <i class="fa fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p><strong>Who can register on Raktamitra?</strong></p>
+            <p>
+              Anyone willing to donate blood and meet the standard eligibility
+              criteria for blood donation (e.g., age, weight, and health
+              requirements) can register as a donor. Blood recipients or their
+              family members can also register to seek assistance.
+            </p>
+            <p><strong>Is Raktamitra free to use?</strong></p>
+            <p>
+              Yes, Raktamitra is a free platform designed to make blood donation
+              accessible and hassle-free for everyone.
+            </p>
+          </div>
+        </div>
+
+        <!-- For Donors -->
+        <div class="faq-item">
+          <button class="faq-question">
+            For Donors <i class="fa fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p><strong>How can I register as a donor?</strong></p>
+            <p>
+              You can register as a donor by signing up on the platform,
+              providing your details (name, blood type, location, and contact
+              information).
+            </p>
+            <p><strong>Is my personal information safe?</strong></p>
+            <p>
+              Yes, Raktamitra values your privacy. Your personal information is
+              only shared with recipients in genuine need of blood.
+            </p>
+            <p>
+              <strong>How will I be contacted if my blood is needed?</strong>
+            </p>
+            <p>
+              If your blood type matches a recipient's requirements, you will be
+              contacted by the recipients via call or message.
+            </p>
+            <p>
+              <strong
+                >Are there any eligibility criteria to donate blood?</strong
+              >
+            </p>
+            <p>Yes, to donate blood, you must:</p>
+            <ul>
+              <li>Be between 18 and 65 years old.</li>
+              <li>Weigh at least 50 kg (110 lbs).</li>
+              <li>
+                Be in good health and not on any medication that prevents
+                donation.
+              </li>
+              <li>Have a minimum hemoglobin level of 12.5 g/dL.</li>
+            </ul>
+            <p><strong>How often can I donate blood?</strong></p>
+            <p>
+              Men can donate blood every 3 months, while women can donate every
+              4 months, provided they meet all other eligibility requirements.
+            </p>
+          </div>
+        </div>
+
+        <!-- For Recipients -->
+        <div class="faq-item">
+          <button class="faq-question">
+            For Recipients <i class="fa fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p><strong>How do I request blood on Raktamitra?</strong></p>
+            <p>
+              To request blood, you can register as a recipient and submit a
+              blood request form. Include details such as the required blood
+              group, location, and urgency of the need.
+            </p>
+            <p><strong>How quickly can I find a donor?</strong></p>
+            <p>
+              The time to find a donor depends on the availability of compatible
+              donors in your area and the urgency of your request.
+            </p>
+            <p><strong>What blood types can I request?</strong></p>
+            <p>
+              You can request any blood type (e.g., A, B, AB, O, and Rh
+              factors). The platform will match you with donors who have the
+              required blood type.
+            </p>
+          </div>
+        </div>
+
+        <!-- Technical Questions -->
+        <div class="faq-item">
+          <button class="faq-question">
+            Technical Questions <i class="fa fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>
+              <strong>How do I update my donor or recipient profile?</strong>
+            </p>
+            <p>
+              Log in to your account, navigate to the profile section, and
+              update your details. Make sure to save the changes before exiting.
+            </p>
+            <p>
+              <strong
+                >What should I do if I face issues with the platform?</strong
+              >
+            </p>
+            <p>
+              If you encounter technical difficulties, contact our support team
+              via email or the help section. Provide a detailed description of
+              the issue to receive prompt assistance.
+            </p>
+          </div>
+        </div>
+
+        <!-- Medical and Safety Questions -->
+        <div class="faq-item">
+          <button class="faq-question">
+            Medical and Safety Questions <i class="fa fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p><strong>Is blood donation safe?</strong></p>
+            <p>
+              Yes, donating blood is a safe procedure. Sterile equipment is
+              used, and the process is conducted by trained professionals.
+            </p>
+            <p>
+              <strong
+                >Are there any risks involved in receiving donated
+                blood?</strong
+              >
+            </p>
+            <p>
+              Blood transfusions are generally safe, but recipients should
+              ensure the transfusion is conducted by a certified medical
+              facility.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="footer-container">
+          <!-- Left Div -->
+          <div class="footer-left">
+              <h3>About Raktamitra</h3>
+              <p>
+                  Raktamitra is a platform dedicated to bridging the gap between blood donors and recipients. 
+                  Our mission is to ensure that no one has to wait for life-saving blood in times of need. 
+                  Join us and be a part of this noble cause to save lives.
+              </p>
+          </div>
+          <!-- Right Div -->
+          <div class="footer-right">
+              <h3>Quick Links</h3>
+              <ul>
+                  <li><a href="faq.html">FAQs</a></li>
+                  <li>Contact Us : 0731- 2347222</li>
+                  
+                  <li><a href="">Know your blood compatibility</a></li>
+              </ul>
+              <h3>Follow Us</h3>
+              <div class="social-icons">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+          </div>
+      </div>
+      <hr>
+      <p class="copyright">© 2024 Raktamitra. All Rights Reserved.</p>
+  </footer>
+    <script src="index.js"></script>
+    <script>
+      // JavaScript to handle FAQ toggle
+      document.querySelectorAll(".faq-question").forEach((button) => {
+        button.addEventListener("click", () => {
+          const faqAnswer = button.nextElementSibling;
+          button.classList.toggle("active");
+          if (button.classList.contains("active")) {
+            faqAnswer.style.maxHeight = faqAnswer.scrollHeight + "px";
+          } else {
+            faqAnswer.style.maxHeight = 0;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

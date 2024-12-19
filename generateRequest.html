@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Blood Request</title>
+    <link rel="stylesheet" href="generateRequest.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Redressed&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div id="navbar">
+          <div id="app-name">
+            <a href="javascript:void(0)" onclick="openNav()"
+              ><i id="hamburger" class="fa-solid fa-bars"></i
+            ></a>
+            RaktaMitra
+          </div>
+          <div id="nav-gap"></div>
+          <div id="nav-sec2">
+            <div class="nav"><a href="index.html">Home</a></div>
+            <div class="nav"><a href="#footer">About us</a></div>
+            <div class="nav"><a href="faq.html">FAQ</a></div>
+            <div id="login-sign-but">
+              <button id="login-signup-but">
+                <a href="login.html">Log In</a> /
+                <a href="Registration.html">Sign Up</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+    <!-- Side bar -->
+    <div id="side-nav" class="side-nav">
+        <div class="side-nav-top">
+            <h3 class="side-nav-title">RaktaMitra</h3>
+        </div>
+        <a href="viewProfile.html"><i class="fa-solid fa-user"></i> View Profile</a>
+        <a href="generateRequest.html"><i class="fa-solid fa-hand-holding-medical"></i> Request Blood</a>
+        <a href="#footer"><i class="fa-solid fa-info-circle"></i> About Us</a>
+        <a href="#"><i class="fa-solid fa-sign-out-alt"></i> Sign Out</a>
+    </div>
+    <main class="container">
+        <form class="request-form">
+            <h2>Request Form</h2>
+
+            <label for="blood-type">Required Blood Type:</label>
+            <select id="blood-type" name="blood-type" required>
+                <option value="">Select Blood Type</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+            </select>
+
+            <label for="urgency-level">Urgency Level:</label>
+            <select id="urgency-level" name="urgency-level" required>
+                <option value="">Select Urgency</option>
+                <option value="Immediate">Immediate</option>
+                <option value="Within 24 hours">Within 24 hours</option>
+                <option value="Within a week">Within a week</option>
+            </select>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" placeholder="Enter hospital or location" required>
+
+            <label for="quantity">Quantity Required (Units):</label>
+            <input type="number" id="quantity" name="quantity" min="1" placeholder="Enter quantity" required>
+
+            <label for="notes">Additional Notes:</label>
+            <textarea id="notes" name="notes" placeholder="Enter any additional details"></textarea>
+
+            <div class="button-container">
+                <button type="submit"><a href="donorSearch.html">Generate Request</a></button>
+            </div>
+        </form>
+        <div id="notification" style="display: none;"></div>
+    </main>
+    <footer id="footer">
+      <div class="footer-container">
+          <!-- Left Div -->
+          <div class="footer-left">
+              <h3>About Raktamitra</h3>
+              <p>
+                  Raktamitra is a platform dedicated to bridging the gap between blood donors and recipients. 
+                  Our mission is to ensure that no one has to wait for life-saving blood in times of need. 
+                  Join us and be a part of this noble cause to save lives.
+              </p>
+          </div>
+          <!-- Right Div -->
+          <div class="footer-right">
+              <h3>Quick Links</h3>
+              <ul>
+                  <li><a href="faq.html">FAQs</a></li>
+                  <li>Contact Us : 0731- 2347222</li>
+                  
+                  <li><a href="">Know your blood compatibility</a></li>
+              </ul>
+              <h3>Follow Us</h3>
+              <div class="social-icons">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+          </div>
+      </div>
+      <hr>
+      <p class="copyright">© 2024 Raktamitra. All Rights Reserved.</p>
+  </footer>
+    <script src="index.js"></script>
+</body>
+</html>

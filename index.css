@@ -1,0 +1,436 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+}
+#dashboard-pop{
+    height: 50px;
+    width: 20px;
+}
+#app-name{
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    font-family: 'Redressed', cursive ; 
+    margin-left: 10px;
+}
+#app-name i {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 25px;
+}
+#app-name a {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+}
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    height: 52px;
+    width: 100%;
+    background-color: #ab2020;
+    color: white;
+    padding: 6px 0px;
+}
+#nav-sec2{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: end;
+    padding-right: 8px;
+}
+#login-signup-but{
+    font-size: 20px;
+    height: 35px;
+    width: 160px;
+    background-color: white;
+    color: #ab2020;
+    border-radius: 5px;
+    border: none;
+}
+#login-signup-but a{
+    color: #ab2020;
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+#login-signup-but a:hover{
+    text-decoration: underline;
+    font-weight: 700;
+}
+.nav{
+    display: flex;
+    margin: 0 10px;
+    padding-left:10px ;
+    padding-right: 10px;
+    width: 110px; 
+    text-align: center;
+    justify-content: center;
+}
+.nav a {
+    color: white;
+    text-decoration: none;
+}
+#home-para1{
+    font-size: 1.5em;
+    display: inline;
+
+}
+#request-blood{
+    background-color: #ab2020;
+    color: white;
+    font-weight: 800;
+    height: 70px;
+    width: 40vh;
+    font-size: 1.75rem;
+    border: none;
+    margin-top: 20px;
+}
+
+/*  -------SIDE NAVIGATION BAR-------*/
+
+.side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:#ab2020;
+    color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    border-right: 2px solid ;
+}
+
+.side-nav-top {
+    background-color: white;
+    color: #ab2020;
+    padding: 10px 20px;
+}
+
+.side-nav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-nav a:hover {
+    color: #f1f1f1;
+}
+
+.side-nav i {
+    margin-right: 10px;
+}
+
+.side-nav-title {
+    font-family: 'Redressed', cursive;
+    font-size: 35px;
+    font-weight: bold;
+    /* color: white; */
+    /* margin-bottom: 20px; */
+    padding-left: 25px;
+}
+
+/* -----SECTION - 1------ */
+
+#home-section1{
+    display: flex;
+    width: 100%;
+    height: 640px;
+}
+#home-para-heading{
+    color: #BA2121;
+    font-size: 50px;
+}
+#home-para-raktamitra{
+    color: #ab2020;
+    font-size: 1.5em;
+    display: inline;
+}
+#home-image{
+    height: 75%;
+    padding: 10px;
+    padding: 50px 20px 20px 20px;
+}
+#home-div1{
+    padding: 150px 150px 150px 100px ;
+   
+}
+#home-stats{
+    width: 100%;
+    background-size: contain;
+}
+
+@media (max-width: 54%) {
+    #home-section1 {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #home-div1 {
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    #home-para-heading {
+        font-size: 2em;
+    }
+
+    #request-blood {
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    #home-image {
+        /* width: 100%; */
+        height: auto;
+        padding: 10px;
+    }
+}
+
+
+
+/* ------SECTION -2  reasons section ------*/
+#reasons-section {
+    padding: 50px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#reasons-section h2 {
+    font-size: 3rem;
+    color: #ab2020;
+    margin-bottom: 20px;
+}
+
+.reasons-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+    gap: 20px; 
+}
+
+.reason-item {
+    flex: 1 1 20%;
+    max-width: 20%;
+    box-sizing: border-box; 
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    text-align: left;
+}
+
+.reason-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.reason-item h3 {
+    font-size: 1.5em;
+    color: #ab2020;
+    margin-bottom: 10px;
+}
+
+.reason-item p {
+    font-size: 1em;
+    color: #333;
+}
+
+
+/* Blood Compatibility Section */
+#blood-compatibility {
+    padding: 40px;
+    background-color: #FAE5E5;
+    height: 90%;
+}
+
+.compatibility-container {
+    display: flex;
+    justify-content: space-between; /* Space evenly between divs */
+    align-items: flex-start; /* Align divs at the top */
+    gap: 20px; /* Space between the columns */
+}
+
+.compatibility-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.compatibility-table th,
+.compatibility-table td {
+    border: 1px solid #a09b9b;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.compatibility-table th {
+    background-color: #ab2020;
+    color: white;
+}
+
+.compatibility-table td:first-child {
+    font-weight: bold;
+    color: #ab2020;
+}
+
+/* Center Div: Heading and Description */
+.compatibility-info {
+    max-width: 300px; /* Set a fixed width for consistent spacing */
+    text-align: center;
+}
+
+.compatibility-info h2 {
+    color: #ab2020;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.compatibility-description {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Right Div: Image and Caption */
+.donation-message {
+    text-align: center;
+    max-width: 300px; /* Set a fixed width for consistent spacing */
+}
+
+.donation-message img {
+    max-width: 100%; /* Make the image responsive */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.donation-message p {
+    font-size: 18px;
+    font-style: italic;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-weight: bold;
+    color: #333;
+}
+
+/* ------ SECTION -LAST----- */
+.section-last {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    background-color: #f9f9f9;
+} 
+
+#section-last-heading{
+    color: #ab2020;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 15px ;
+}
+#home-image-last {
+    display: flex;
+    justify-content: center;
+    max-width: 50%;
+    border-radius: 8px;
+
+}
+#section-last-para{
+    width: 100vh;
+    text-align: center;
+    font-size: 1.2rem;
+    color: rgb(52, 48, 48);
+
+}
+
+
+/* -------FOOTER------- */
+#footer {
+    background-color: #ab2020;
+    color: white;
+    padding: 40px 20px 20px 20px;
+    text-align: left;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 250px;
+}
+
+.footer-left,
+.footer-right {
+    flex: 1;
+    margin: 10px;
+    margin-left: 30px;
+}
+
+.footer-left h3,
+.footer-right h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.footer-left p {
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+
+.footer-right ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-right ul li {
+    margin: 5px 0;
+}
+
+.footer-right ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.footer-right ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.social-icons a:hover {
+    color: #f1f1f1;
+}
+
+hr {
+    border: 0.5px solid white;
+    margin: 20px 0;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 300;
+    margin-top: 10px;
+}

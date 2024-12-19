@@ -1,0 +1,136 @@
+/* Edit Profile Styling */
+.edit-profile-container {
+    display: none;
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.edit-profile-container h2{
+    color: #ab2020;
+}
+
+.edit-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #e60000;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button.save-btn {
+    background-color: #e60000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.cancel-btn {
+    background-color: #ddd;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.profile-container {
+    padding:  20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-details,
+.donation-history {
+    width: 45%;
+}
+.profile-container h2{
+    font-size: 2rem;
+    color: #ab2020;
+}
+ .profile-container h3 {
+    color: #ab2020;
+}
+
+p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #e60000;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+.edit-btn{
+    background-color: #ffa0b9;
+    width: 20%;
+    height: 15%;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+form label{
+    color: black;
+    font-weight: 600;
+}
